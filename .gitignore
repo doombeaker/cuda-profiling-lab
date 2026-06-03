@@ -1,0 +1,17 @@
+# OpenCode workspace
+.sisyphus/
+
+# NSight profiling reports
+*.nsys-rep
+*.ncu-rep
+*.sqlite
+
+# Compiled CUDA binaries (no extension) — keep .cu/.sh/.md sources
+phase1_nsys/*/*
+!phase1_nsys/*/*.cu
+!phase1_nsys/*/*.sh
+!phase1_nsys/*/*.md
+phase2_ncu/*/*
+!phase2_ncu/*/*.cu
+!phase2_ncu/*/*.sh
+!phase2_ncu/*/*.md
