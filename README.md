@@ -1,4 +1,4 @@
-# nv_profiling — CUDA Profiling 系统学习项目
+# cuda-profiling-lab — CUDA Profiling Hands-On Labs
 
 通过 **23 个 hands-on 练习** 系统学习 NVIDIA NSight Systems（`nsys`）和 NSight Compute（`ncu`）。
 
@@ -23,7 +23,7 @@ nsys-ui ./report01.nsys-rep        # GUI 查看
 ## 项目结构
 
 ```
-nv_profiling/
+cuda-profiling-lab/
 ├── Makefile            # 统一构建（sm_90, C++17, O2）
 ├── common/             # 公共工具（CUDA_CHECK 宏, GpuTimer, CpuTimer）
 │
