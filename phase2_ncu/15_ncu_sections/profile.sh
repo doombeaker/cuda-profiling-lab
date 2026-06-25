@@ -3,7 +3,10 @@ set -e
 CUDA_HOME=${CUDA_HOME:-/usr/local/cuda-12.4}
 NCU=$CUDA_HOME/nsight-compute-2024.1.1/ncu
 EXE=$(dirname $0)/ncu_sections
-make -C ../.. $EXE
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+PROJECT_ROOT=$(cd "$SCRIPT_DIR/../.." && pwd)
+REL=${SCRIPT_DIR#"$PROJECT_ROOT/"}
+make -C "$PROJECT_ROOT" "$REL/$(basename "$EXE")"
 $NCU --set analysis -o ./report15 --force-overwrite true $EXE
 echo "Done. Open with: ncu-ui ./report15.ncu-rep (profiled with --set analysis)."
 echo ""
