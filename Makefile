@@ -49,6 +49,9 @@ phase2_ncu/05_occupancy/occupancy:     phase2_ncu/05_occupancy/occupancy.cu     
 phase2_ncu/06_mem_bandwidth/mem_bandwidth: phase2_ncu/06_mem_bandwidth/mem_bandwidth.cu common/error_check.h common/timer.h
 	$(NVCC) $(NVCCFLAGS) $< -o $@
 
+phase2_ncu/07_compute_mem_bound/compute_mem_bound: phase2_ncu/07_compute_mem_bound/compute_mem_bound.cu common/error_check.h common/timer.h
+	$(NVCC) $(NVCCFLAGS) $< -o $@
+
 phase1_nsys/05_nvtx/nvtx:                    phase1_nsys/05_nvtx/nvtx.cu                    common/error_check.h common/timer.h
 	$(NVCC) $(NVCCFLAGS) $< -o $@
 
