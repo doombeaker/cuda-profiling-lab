@@ -7,6 +7,6 @@ SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 PROJECT_ROOT=$(cd "$SCRIPT_DIR/../.." && pwd)
 REL=${SCRIPT_DIR#"$PROJECT_ROOT/"}
 make -C "$PROJECT_ROOT" "$REL/$(basename "$EXE")"
-$NSYS profile -o ./report10 --force-overwrite true --trace=cuda,unified-memory $EXE
+$NSYS profile -o ./report10 --force-overwrite true --trace=cuda,osrt $EXE
 echo "Done. Open with: nsys-ui ./report10.nsys-rep"
 echo "Look for the 'Unified Memory' row showing page faults and migrations."
